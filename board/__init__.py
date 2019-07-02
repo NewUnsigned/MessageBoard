@@ -23,3 +23,4 @@ bootstrap = Bootstrap(app)
 moment = Moment(app)
 
 from board import views, errors, commands
+

@@ -1,4 +1,4 @@
-'''
+"""
   File: models.py
   Project: board
   
@@ -10,15 +10,12 @@
   HISTORY:
   Date      	By		Comments
   ----------	---		---------------------------------------------------------
-'''
+"""
 
 from datetime import datetime
 from board import db
-from flask_sqlalchemy import SQLAlchemy
-
 class Message(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     body = db.Column(db.String(200))
     name = db.Column(db.String(20))
-    timestamp = db.Column(db.DateTime, defaut=datetime.now, index=True)
-    
+    timestamp = db.Column(db.DateTime, default=datetime.utcnow, index=True)
